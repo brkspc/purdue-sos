@@ -10,11 +10,13 @@ from numpy.random import randint, rand
 import matplotlib.pyplot as plt
 import numpy as np
 
-class vertiport():
+class vertiport(): # this nothing but a location, neighborhood
     def __init__(self, vpID):
-        self.ID = vpID
+        self.ID = vpID # name 
         # aircraft info
-        self.idleAircraft = [3*60, 3*60] # [8.5*60, 8.5*60] # initiate with 2 aircrafts
+        # list of objects in the neighborhood
+        # 180 minutes of flight endurance for each a/c . this  vertiport has 2 a/cs tobegin with
+        self.idleAircraft = [3*60, 3*60] # [8.5*60, 8.5*60] # initiate with 2 aircrafts 
         self.chargingAircraft = []
         self.incomingAircraftArrival = []
         self.incomingAircraftCharge = []

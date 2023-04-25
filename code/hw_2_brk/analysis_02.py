@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 timeStep = 5 # min
 timeVector = range(0, timeStep*144, timeStep)
 
-for idx in range(9):
+for idx in range(1):
     vertiportA = vertiport('vpA')
     vertiportB = vertiport('vpB')
     vertiportB.connectedPorts = 'vpA'
