@@ -10,6 +10,7 @@ Created on Tue Apr 25 03:25:33 2023
 import numpy as np
 from localityClass import locality
 import matplotlib.pyplot as plt
+from plotFunctions import * # this is how we call to 
 
 # define a generic example for locality placement
 townA = locality('townA',0,0,'townB')
@@ -18,11 +19,8 @@ townC = locality('townC',10,10,'townB')
 townD = locality('townD',10,-10,'townB')
 towns = [townA,townB,townC,townD]
 
-# maybe we should create a function such as pltTowns from the below stuff
-# drawing connected lines between neighbouring towns would also be helpful
-for eachTown in towns:
-    plt.scatter(eachTown.pos[0],eachTown.pos[1])
-    txtOffset = 0.15  
-    plt.text(eachTown.pos[0]+txtOffset,eachTown.pos[1]+txtOffset,eachTown.ID)
+# call the specific function to plot the towns
+plot_towns(towns)
+
     
 plt.show()
